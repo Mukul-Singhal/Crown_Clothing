@@ -41,7 +41,7 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/shop" component={ShopPage}></Route>
+          <Route path="/shop" component={ShopPage}></Route>
           <Route exact path="/checkout" component={Checkout}></Route>
           <Route
             exact
@@ -50,7 +50,7 @@ class App extends Component {
               this.props.currentUser ? <Redirect to="/" /> : <SignInUp />
             }
           ></Route>
-          <Route path="/" component={Homepage}></Route>
+          <Route exact path="/" component={Homepage}></Route>
         </Switch>
       </div>
     );
